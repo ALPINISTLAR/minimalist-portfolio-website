@@ -1,0 +1,129 @@
+@use '../variables/mixins' as *;
+
+// HERO PART
+.hero {
+
+  &-img {
+    @include mq(tablet) {
+      position: relative;
+    }
+  }
+
+  &-text {
+    margin-top: 2.4rem;
+
+    @include mq(tablet) {
+      position: absolute;
+      max-width: 51.4rem;
+      background-color: #FFFFFF;
+      bottom: 0;
+      margin-top: 0;
+      padding: 5.6rem 5.6rem 0 0;
+    }
+
+    @include mq(laptop) {
+      max-width: 44.5rem;
+      left: -1px;
+      bottom: -1px;
+    }
+  }
+}
+
+// ABOUT PART
+.about {
+  margin-top: 9.6rem;
+
+  &-container {
+    @include mq(tablet) {
+      display: flex;
+      gap: 6.9rem;
+    }
+
+    @include mq(laptop) {
+      gap: 12.5rem;
+    }
+  }
+
+  &-img {
+    max-width: 46rem;
+
+    @include mq(tablet) {
+      max-width: 28.1rem;
+    }
+
+    @include mq(laptop) {
+      max-width: 54rem;
+    }
+  }
+
+  &-content {
+    margin-top: 3.2rem;
+
+    @include mq(tablet) {
+      flex: 1;
+      margin-top: 0;
+    }
+
+    @include mq(tablet) {
+      max-width: 35rem;
+    }
+
+    &-text {
+      margin: 3.2rem 0 5.1rem 0;
+
+      @include mq(tablet) {
+        margin: 5rem 0 4.6rem 0;
+      }
+
+      p {
+        margin: 2.8rem 0 2.4rem;
+      }
+    }
+  }
+}
+
+// Specific button of the homePage
+.button-hero {
+  display: flex;
+  background-color: #203A4C;
+  width: 20rem;
+  margin-top: 3.2rem;
+
+  &:hover {
+    background-color: #5FB4A2;
+
+    img {
+      filter: brightness(0) invert(1);
+    }
+
+    .button-hero-text {
+      font-style: italic;
+    }
+  }
+
+  @include mq(laptop) {
+    margin-top: 5.3rem;
+  }
+
+  &-img {
+    position: relative;
+    flex: 1;
+    width: 4.8rem;
+    height: 4.8rem;
+    background: #000000;
+    opacity: 0.1;
+  }
+
+  img {
+    position: absolute;
+    width: fit-content;
+    padding: 1.8rem 1.6rem;
+  }
+
+  &-text {
+    flex: 3;
+    color: #FFFFFF;
+    padding: 1.7rem 0;
+    text-align: center;
+  }
+}

@@ -1,0 +1,17 @@
+// == BASE == //
+@use "./base/reset";
+@use "./base/base";
+
+// == LAYOUTS == //
+@use "./layouts/header";
+@use "./layouts/footer";
+
+// == COMPONENTS == //
+@use "./components/talkComponent";
+@use "./components/modal";
+
+// == PAGE == //
+@use "./pages/home";
+@use "./pages/portfolio";
+@use "./pages/contact";
+@use "./pages/project";

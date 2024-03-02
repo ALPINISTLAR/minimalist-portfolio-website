@@ -1,0 +1,147 @@
+@use "../variables/mixins" as *;
+
+:root {
+  font-size: 10px;
+  font-family: 'Public Sans', sans-serif;
+  color: #33323D;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Ibarra Real Nova', serif;
+}
+
+.container {
+  max-width: 111rem;
+  margin: auto;
+  padding: 0 3.2rem;
+
+  @include mq(tablet) {
+    padding: 0 4.1rem 0 3.9rem;
+  }
+
+  @include mq(desktop) {
+    padding: 0;
+  }
+}
+
+.big-title {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.2rem;
+  letter-spacing: -0.357143px;
+
+  @include mq(laptop) {
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: -0.446429px;
+  }
+}
+
+.middle-title {
+  font-size: 4rem;
+  line-height: 4.2rem;
+  letter-spacing: -0.357143px;
+  font-weight: 700;
+}
+
+.little-title {
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  font-weight: 400;
+  letter-spacing: -0.285714px;
+}
+
+.small-text {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  opacity: 0.8;
+
+  @include mq(laptop) {
+    font-size: 1.6rem;
+  }
+}
+
+.text {
+  font-size: 1.6rem;
+  line-height: 3.0rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.text-infos {
+  font-size: 1.3rem;
+  line-height: 3rem;
+  font-weight: 700;
+  color: #5FB4A2;
+
+}
+
+.nav-link {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+
+  &:hover {
+    font-size: 1.4rem;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &-black {
+    color: #33323D;
+
+    &:hover {
+      color: #5FB4A2;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.button {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  letter-spacing: 2px;
+
+  &-white {
+    @include button;
+    width: 20.2rem;
+  }
+  
+  &-contact {
+    @include button;
+    width: 16.2rem;
+  }
+  
+  &-project {
+    @include button;
+    width: 17.5rem;
+  }
+
+  &-form {
+    width: 20rem;
+    height: 4.8rem;
+    background-color: #203A4C;
+    color: #FFFFFF;
+
+    &:hover {
+      background-color: #5FB4A2;
+      transition: all 0.4s ease-in-out;
+      font-style: italic;
+    }
+    
+    &:disabled {
+      background-color: #FFFFFF;
+      border: 1px solid #33323D;
+      font-style: normal;
+      color: #33323D;
+      opacity: 0.2;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.border {
+  border: 1px solid #33323D;
+  opacity: 0.15;
+}

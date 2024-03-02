@@ -1,0 +1,47 @@
+// To setup Media Queries
+@mixin mq($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == laptop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+// For Button
+@mixin button {
+  border: 1px solid #33323D;
+  padding: 17px 0 17px 0;
+  height: 4.8rem;
+  text-align: center;
+  color: #33323D;
+
+  &:hover {
+    background-color: #33323D;
+    transition: all 0.4s ease-in-out;
+    color: #FFFFFF;
+    font-style: italic;
+  }
+}
+
+// Text ine contact formin
+@mixin text-form {
+  width: 100%;
+  font-size: 1.3rem;
+  line-height: 3rem;
+  background-color: #EBEBEC;
+
+  &::placeholder {
+    color: #33323D;
+    opacity: 0.4;
+  }
+}
